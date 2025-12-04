@@ -5,6 +5,11 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [color4,setColor4]=useState("white")
+  function handleGreen(){
+    setColor4("green")
+
+  }
 
   return (
     <>
@@ -21,6 +26,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={handleGreen} style={{backgroundColor:color4}}>Green</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
